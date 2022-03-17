@@ -1,12 +1,8 @@
-# Supervised-Learning-Using-SAS
+# Supervised-Learning-Using-SAS  breast-cancer-dataset.csv.
 
 
-1.Download the breast-cancer-dataset.csv. Complete the following tasks 
-
-
-a.	Read the file in SAS and display the contents using the import and print procedures. 
-
-
+## Download the breast-cancer-dataset.csv. Complete the following tasks 
+## Read the file in SAS and display the contents using the import and print procedures. 
 
 proc import
 /* out keyword is used to name a table*/
@@ -23,15 +19,7 @@ proc print data= breastcancer (obs=10);
 title "Breast Cancer Dataset";
 run;
 
-
-
- 
-
-
-
- 
-
-b.	Develop a decision tree-based classification model using the hpsplit procedure of SAS. (2 points) 
+## Develop a decision tree-based classification model using the hpsplit procedure of SAS. (2 points) 
 
 
 proc import
@@ -61,51 +49,11 @@ run;
 
 
  
-
-
- 
-
-
- 
-The resulting decision tree has 286 examples at the root node. Each decision node in the tree is labeled with the corresponding independent variable name and split value. The leaf nodes show the classification decision.
-
+## The resulting decision tree has 286 examples at the root node. Each decision node in the tree is labeled with the corresponding independent variable name and split value. The leaf nodes show the classification decision.
+## 	Navigate the contents of Results View by clicking on HPSplit breast-cancer-dataset, and then by selecting Model Assessment. Examine the confusion matrix, fit statistics, and variable importance.
+## Using the confusion matrix, compute the following assessment metrics accuracy, recall, and precision (see lecture for formulas and state your assumption in bold which class in the confusion matrix you want to consider positive--i.e., recurrence-event or not-recurrence-event)
 
  
-
-
-
-c.	Navigate the contents of Results View by clicking on HPSplit breast-cancer-dataset, and then by selecting Model Assessment. Examine the confusion matrix, fit statistics, and variable importance.
-
-
-
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2. Using the confusion matrix, compute the following assessment metrics accuracy, recall, and precision (see lecture for formulas and state your assumption in bold which class in the confusion matrix you want to consider positive--i.e., recurrence-event or not-recurrence-event)
-
- 
-
-
-
 
 Condition for marks: 3 points for accuracy, 1 point for precision, and 1 point for recall. 
 
@@ -152,11 +100,9 @@ Accuracy = 23+ 194 /194+7+62+23
                       = 0.7667
                    
 
-   I will consider recurrence-event is position, because it is important to recurrence -event have less negative (FN).  There  ML algorithm missed 62 people who has tumors.
+ I will consider recurrence-event is position, because it is important to recurrence -event have less negative (FN).  There  ML algorithm missed 62 people who has tumors.
 
-
-
-3. Change the grow algorithm to “gini” and recompute the metrics from question 2. Does entropy build a more accurate classifier or gini? (5 points) 
+## Change the grow algorithm to “gini” and recompute the metrics from question 2. Does entropy build a more accurate classifier or gini? (5 points) 
 
 proc import
 /* out keyword is used to name a table*/
@@ -183,15 +129,6 @@ proc hpsplit data= breastcancer;
  grow gini; /* specify the criterion for splitting parent nodes */
  prune costcomplexity; /* find a smaller subtree that results in a low error rate */
 run;
-
- 
-
-
-
-
- 
- 
-
 
 
  For entropy   Accuracy = TP+TN / TP+TN +FP+FN
