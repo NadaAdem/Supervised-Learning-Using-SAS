@@ -21,7 +21,7 @@ run;
 ```
 
 
-## Develop a decision tree-based classification model using the hpsplit procedure of SAS. (2 points) 
+## Develop a decision tree-based classification model using the hpsplit procedure of SAS. 
 
 ```
 proc import
@@ -53,7 +53,8 @@ run;
 ```
 
   The resulting decision tree has 286 examples at the root node. Each decision node in the tree is labeled with the corresponding independent variable name and split value. The leaf nodes show the classification decision.
-## 	Navigate the contents of Results View by clicking on HPSplit breast-cancer-dataset, and then by selecting Model Assessment. Examine the confusion matrix, fit statistics, and variable importance. Using the confusion matrix, compute the following assessment metrics accuracy, recall, and precision (see lecture for formulas and state your assumption in bold which class in the confusion matrix you want to consider positive--i.e., recurrence-event or not-recurrence-event)
+### 	Navigate the contents of Results View by clicking on HPSplit breast-cancer-dataset, and then by selecting Model Assessment. Examine the confusion matrix, fit statistics, and variable importance. 
+### Using the confusion matrix, compute the following assessment metrics accuracy, recall, and precision (see lecture for formulas and state your assumption in bold which class in the confusion matrix you want to consider positive--i.e., recurrence-event or not-recurrence-event)
 
  Condition for marks:  accuracy, precision,  recall. 
 
@@ -102,7 +103,7 @@ Accuracy = 23+ 194 /194+7+62+23
 
  I will consider recurrence-event is position, because it is important to recurrence -event have less negative (FN).  There  ML algorithm missed 62 people who has tumors.
 
-## Change the grow algorithm to “gini” and recompute the metrics from question 2. Does entropy build a more accurate classifier or gini? (5 points) 
+## Change the grow algorithm to “gini” and recompute the metrics from question 2. Does entropy build a more accurate classifier or gini? 
 ```
 proc import
 /* out keyword is used to name a table*/
