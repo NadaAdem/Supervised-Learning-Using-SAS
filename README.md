@@ -3,7 +3,7 @@
 
 ## Download the breast-cancer-dataset.csv. Complete the following tasks 
 ## Read the file in SAS and display the contents using the import and print procedures. 
-
+'''
 proc import
 /* out keyword is used to name a table*/
 out= breastcancer 
@@ -18,7 +18,7 @@ getnames=yes;
 proc print data= breastcancer (obs=10);
 title "Breast Cancer Dataset";
 run;
-
+'''
 ## Develop a decision tree-based classification model using the hpsplit procedure of SAS. (2 points) 
 
 
